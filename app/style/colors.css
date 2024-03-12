@@ -25,6 +25,12 @@
     --color-exito: #28a745; /* Verde para mensajes de éxito */
 }
 
+/* Hovers */
+:root {
+
+    --hover-gris-claro: rgba(80, 80, 80, 0.316);
+}
+
 
 /* Menu colores */
 :root{

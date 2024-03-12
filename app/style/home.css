@@ -4,55 +4,63 @@ body {
     background-color: var(--color-fondo);
 }
 
+/*Estilo para botones */
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 20px; /* Espacio en tre columnas */
     grid-auto-rows: minmax(100px, auto);
 }
   .one {
-    background-color: antiquewhite;
     grid-column: 1;
     grid-row: 1;
   }
   .two {
-    background-color: brown;
     grid-column: 2;
     grid-row: 1;
   }
   .three {
-    background-color: blue;
     grid-column: 3;
     grid-row: 1;
   }
   .four {
-    background-color: aquamarine;
     grid-column: 1;
     grid-row: 2;
   }
-
-.wrapper-in{
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-gap: 20px;
-margin: 0 10px 10px 10px;
-grid-auto-rows: minmax(100px, auto);
-}
-
  .uno{
-    
-    border-color: brown;
     grid-column: 1;
     grid-row: 1;
  }
 
  .dos{
-    background-color: black;
     grid-column: 2;
     grid-row: 1;
  }
 
-.ion-icon{
-font-size: 50px;
+.uno {
+    display: flex; /* Utiliza flexbox para alinear icono y texto */
+    align-items: center; /* Alinea verticalmente el icono y el texto */
+    justify-content: center; /* Centra el contenido */
+    background-color:var(--color-secundario); /* Color de fondo para el botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Añade bordes redondeados si lo deseas */
+    transition: background-color 0.3s, transform 0.3s; /* Efecto suave para el hover */
+    gap: 20px; /* Espacio entre el icono y el texto */
+    width: 100%;
+    height: 100%;
 }
-  
+
+/* Estilos para el hover */
+.uno:hover {
+    background-color: var(--hover-gris-claro); /* Cambia al color que prefieras para el hover */
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el cursor */
+}
+
+/* Estilos para el icono del wrapper */
+.wrapper-icon {
+    font-size: 40px; /* Ajustar el tamaño del icono según tu diseño */
+    vertical-align: middle; /* Alinea verticalmente con el texto si es necesario */
+}
+
+/* Estilos para los botones FIN */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="../style/menu.css">
 </head>
 <body>
     <div class="menu">
@@ -20,10 +20,15 @@
             </div>
         </div>
 
+        <?php
+        // Obtén el nombre del archivo del script actual
+        $currentPage = basename($_SERVER['SCRIPT_NAME']);
+        ?>
+
         <nav class="navegacion">
             <ul>
                 <li>
-                    <a id="inbox" href="home.php">
+                    <a href="home.php" class="<?php echo $currentPage == 'home.php' ? 'menu-activo' : ''; ?>">
                         <ion-icon name="home-outline"></ion-icon>
                         <span>Inicio</span>
                     </a>
@@ -35,31 +40,31 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="actives.php" class="<?php echo $currentPage == 'actives.php' ? 'menu-activo' : ''; ?>">
                         <ion-icon name="reader-outline"></ion-icon>
                         <span>Activos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="license.php" class="<?php echo $currentPage == 'license.php' ? 'menu-activo' : ''; ?>">
                         <ion-icon name="wallet-outline"></ion-icon>
                         <span>Licencias de Software</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="accounts.php" class="<?php echo $currentPage == 'accounts.php' ? 'menu-activo' : ''; ?>">
                         <ion-icon name="people-outline"></ion-icon>
                         <span>Cuentas</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="phones.php" class="<?php echo $currentPage == 'phones.php' ? 'menu-activo' : ''; ?>">
                         <ion-icon name="phone-portrait-outline"></ion-icon>
                         <span>Telefonos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="trash.php" class="<?php echo $currentPage == 'trash.php' ? 'menu-activo' : ''; ?>">
                         <ion-icon name="trash-outline"></ion-icon>
                         <span>Basura</span>
                     </a>
@@ -101,6 +106,6 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

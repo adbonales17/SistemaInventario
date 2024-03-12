@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["loggedin"] = true;
         $_SESSION["user_id"] = $user_id;
         $_SESSION["username"] = $db_username;
-        header("Location: home.php");
+        header("Location: pages/home.php");
         exit();
     } else {
         $_SESSION["error"] = "Nombre de usuario o contraseña incorrecto";

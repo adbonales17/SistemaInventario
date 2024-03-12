@@ -35,6 +35,7 @@ body{
 /*----------------Barra Lateral*/
 .barra-lateral{
     left: 0;
+    top: 0;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -246,13 +247,19 @@ body{
     color: var(--color-menu-hover-texto);
 }
 
+.menu-activo {
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+
 main{
-    margin-left: 250px;
+    margin-left: 280px;
     padding: 20px;
+    padding-top: 50px;
     transition: margin-left 0.5s ease;
 }
 main.min-main{
-    margin-left: 80px;
+    margin-left: 90px;
 }
 
 
