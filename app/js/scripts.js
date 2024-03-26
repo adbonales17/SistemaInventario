@@ -34,7 +34,14 @@ function configurarMenuYMain() {
     palanca.addEventListener("click", () => {
         let body = document.body;
         body.classList.toggle("dark-mode");
-        body.classList.toggle("");
+
+        // Guardar el estado del modo oscuro en LocalStorage
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("modoOscuro", "activo");
+        } else {
+            localStorage.setItem("modoOscuro", "inactivo");
+        }
+
         circulo.classList.toggle("prendido");
     });
 
@@ -48,5 +55,12 @@ function configurarMenuYMain() {
     });
 }
 
-// Llamar a la función para configurar el menú y el main cuando el DOM esté listo
-document.addEventListener("DOMContentLoaded", configurarMenuYMain);
+// Evento DOMContentLoaded para inicializar todo cuando el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", () => {
+    configurarMenuYMain();
+
+    // Verificar el estado del modo oscuro almacenado en LocalStorage
+    if (localStorage.getItem("modoOscuro") === "activo") {
+        document.body.classList.add("dark-mode");
+    }
+});
